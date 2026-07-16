@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>Gaming & Streaming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gaming-hero">
+        <h1>Gaming & Streaming PCs</h1>
+        <p>Custom systems built for high FPS gaming and smooth streaming.</p>
+    </div>
+    <div class="gaming-builds">
+        <div class="gaming-card">
+            <div class="why-section">
+                <h2>Why choose Our Gaming Systems?</h2>
+                <div class="why-container">
+                    <div class="why-card">
+                        <h3>High FPS Performance</h3>
+                        <p>Optimized for competitive and smooth gameplay.</P>
+                    </div>
+                    <div class="why-card">
+                        <h3>Streaming Ready</h3>
+                        <p>Designed for gaming and live streaming together.</p>
+                    </div>
+                    <div class="why-card">
+                        <h3>Future Upgrade Support</h3>
+                        <p>Built with upgrade flexibility for future hardware.</p>
+                    </div>
+                </div>
+            </div>
+            <h2>Competitive FPS Build</h2>
+            <p>Optimized for high refresh rate esprts gaming.</p>
+            <a href="#">View Build</a>
+            <h2 id="build-text">
+                Choose Your Gaming Tier
+            </h2>
+            <button onclick="changeText()">
+            Ultra Gaming
+            </button>
+            <h2 id="build_text">
+                Select your gaming Style
+            </h2>
+            <p id="build-description">
+                Choose a performance category to explore.
+            </p>
+            <h3 id="build-price">
+                Starting at ₹79,999
+            </h3>
+            <ul id="spec-list">
+                <li>High Performance Components</li>
+                <li>Optimized Cooling</li>
+                <li>Upgradeable Platform</li>
+            </ul>
+            <div class="selector buttons">
+                <button id="esports-btn" onclick="showEsports()">
+                    Esports
+                </button>
+                <button id="streaming-btn" onclick="showStreaming()">
+                    Streaming
+                </button>
+                <button id="ultra-btn" onclick="showUltra()">
+                    Ultra Gaming
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function changeText(){
+            document.getElementById("build-text").innerHTML = "Rcommended for 1440p and 4k gaming.";
+        }
+    </script>
+    <script>
+
+        function clearButtons() {
+            document.getElementById("esports-btn") .classList.remove("active-btn");
+            document.getElementById("streaming-btn") .classList.remove("active-btn");
+            document.getElementById("ultra-btn") .classList.remove("active-btn");
+        }
+        function showEsports() {
+            clearButtons();
+            document.getElementById("esports-btn") .classList.add("active-btn");
+            document.getElementById("build-text").innerHTML = "Esports Gaming";
+            document.getElementById("build-description").innerHTML = "Optimized for Valorant, CS2 and competitive FPS gaming.";
+            document.getElementById("build-price").innerHTML = "starting at ₹74,999";
+            document.getElementById("spec-list").innerHTML =
+                `
+                <li>Ryzen 5 Processor</li>
+                <li>RTX 4060 Graphics</li>
+                <li>240Hz Gaming Ready</li>
+                `;
+            }
+        function showStreaming() {
+            clearButtons();
+            document.getElementById("streaming-btn") .classList.add("active-btn");
+            document.getElementById("build-text").innerHTML = "Streaming Setup";
+            document.getElementById("build-description").innerHTML = "Built for gaming and smooth live streaming performance."; 
+            document.getElementById("build-price").innerHTML= "starting at ₹89,999";
+            document.getElementById("spec-list").innerHTML =
+                `
+                <li>Ryzen 7 Processor</li>
+                <li>32GB RAM</li>
+                <li>OBS Streaming Optimized</li>
+            `;
+
+        }   
+        function showUltra() {
+            clearButtons();
+            document.getElementById("ultra-btn") .classList.add("active-btn");
+            document.getElementById("build-text").innerHTML = "Ultra Gaming Performance";
+            document.getElementById("build-description").innerHTML = "Designed for high-end 1440p and 4K gaming.";
+            document.getElementById("build-price").innerHTML= "Starting at ₹1,24,999";
+            document.getElementById("spec-list").innerHTML =
+                `
+                <li>RTX 4070 Graphics</li>
+                <li>DDR5 Memory</li>
+                <li>4k Ultra Sttings Ready</li>
+            `;
+
+        }
+
+    </script>
+</body>
+</html>
